@@ -5,6 +5,7 @@ jobs:
    working_directory: ~/tmp
    docker:
     - image: circleci/openjdk:8-jdk
+    - image: circleci/node:4.8.2
    steps:
     - checkout
     - run : echo "test pass"
