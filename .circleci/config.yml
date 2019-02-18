@@ -4,7 +4,6 @@ jobs:
   "environmentSetup":
    working_directory: ~/tmp
    docker:
-    - image: circleci/openjdk:8-jdk
     - image: circleci/node:6.11.3
    steps:
     - checkout
