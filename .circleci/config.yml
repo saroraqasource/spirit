@@ -5,11 +5,11 @@ jobs:
    working_directory: ~/tmp
    docker:
     - image: circleci/openjdk:8-jdk
-    - image: circleci/node:4.8.2
+    - image: circleci/node:6.11.3
    steps:
     - checkout
     - run : echo "test pass"
-    - run : npm install -g
+    - run : npm install
     - run : npm test
     - run : echo "NPM installed successfully"
    
