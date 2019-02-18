@@ -1,0 +1,19 @@
+version: 2
+
+jobs:
+  "environmentSetup":
+   working_directory: ~/tmp
+   docker:
+    - image: circleci/openjdk:8-jdk
+   steps:
+    - checkout
+    - run : echo "test pass"
+    - run : npm install -g
+    - run : npm test
+    - run : echo "NPM installed successfully"
+   
+workflows:
+ version: 2
+ build:  
+  jobs:
+   - "environmentSetup"
